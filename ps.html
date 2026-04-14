@@ -2,6 +2,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina PS</title>
+    <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
 
@@ -9,29 +36,35 @@
 
     <!-- DESCRIPCIÓN -->
     <h2>Descripción</h2>
-    <p>
-        El comando <strong>ps</strong> se utiliza en sistemas Linux y Unix para mostrar información sobre los procesos que se están ejecutando en el sistema. 
-        Permite ver el identificador del proceso (PID), el usuario, el uso de CPU y memoria, entre otros datos.
-    </p>
+    <div class="flex">
+        <p>
+            El comando <strong>ps</strong> se utiliza en sistemas Linux y Unix para mostrar información sobre los procesos que se están ejecutando en el sistema. 
+            Permite ver el identificador del proceso (PID), el usuario, el uso de CPU y memoria, entre otros datos.
+        </p>
+    </div>
 
     <!-- OPCIONES -->
     <h2>Opciones</h2>
-    <ul>
-        <li><strong>-e</strong> → Muestra todos los procesos del sistema.</li>
-        <li><strong>-f</strong> → Muestra información detallada (formato completo).</li>
-        <li><strong>-u</strong> → Muestra los procesos de un usuario específico.</li>
-    </ul>
+    <div class="flex">
+         <ul>
+            <li><strong>-e</strong> → Muestra todos los procesos del sistema.</li>
+            <li><strong>-f</strong> → Muestra información detallada (formato completo).</li>
+            <li><strong>-u</strong> → Muestra los procesos de un usuario específico.</li>
+        </ul>
+    </div>
 
     <!-- EJEMPLOS -->
     <h2>Ejemplos</h2>
-    <pre>
+        <div class="flex">
+            <pre>
 # Mostrar todos los procesos
 ps -e
 
 # Mostrar procesos con formato completo
 ps -ef
-    </pre>
+            </pre>
 
+        </div>
     <h2>Aportaciones</h2>
 
     <h3>Aron Estalayo</h3>

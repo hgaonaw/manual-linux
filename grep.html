@@ -1,51 +1,92 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplos comando grep</title>
+    <title>Pagina GREP</title>
+    <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
 
-    <!-- TÍTULO -->
-    <h1>Comando GREP</h1>
+    <h1>GREP</h1>
 
-    <!-- COMANDO -->
-    <h2>Comando</h2>
-    <p>grep</p>
-
-    <!-- DESCRIPCIÓN / FUNCIÓN -->
+    <!-- DESCRIPCIÓN -->
     <h2>Descripción</h2>
-    <p>
-        El comando <strong>grep</strong> se utiliza en sistemas Linux y Unix para buscar texto dentro de archivos. 
-        Permite encontrar líneas que coincidan con un patrón específico, ya sea una palabra, frase o expresión regular.
-    </p>
-
-    <!-- SINTAXIS -->
-    <h2>Sintaxis</h2>
-    <pre>
-grep [opciones] patrón [archivo]
-    </pre>
+    <div class="flex">
+        <p>
+            El comando <strong>grep</strong> se utiliza para buscar texto dentro de archivos. 
+            Permite encontrar palabras o patrones específicos y mostrar las líneas donde aparecen.
+        </p>
+    </div>
 
     <!-- OPCIONES -->
     <h2>Opciones</h2>
-    <ul>
-        <li><strong>-i</strong>: Ignora mayúsculas y minúsculas en la búsqueda.</li>
-        <li><strong>-r</strong>: Busca de forma recursiva dentro de directorios.</li>
-        <li><strong>-n</strong>: Muestra el número de línea donde se encuentra la coincidencia.</li>
-    </ul>
+    <div class="flex">
+         <ul>
+            <li><strong>-i</strong> → Ignora mayúsculas y minúsculas.</li>
+            <li><strong>-n</strong> → Muestra el número de línea.</li>
+            <li><strong>-r</strong> → Busca de forma recursiva en directorios.</li>
+        </ul>
+    </div>
 
     <!-- EJEMPLOS -->
     <h2>Ejemplos</h2>
-    <pre>
-# Buscar la palabra "error" en un archivo
-grep error archivo.txt
+        <div class="flex">
+            <pre>
+# Buscar una palabra en un archivo
+grep "texto" archivo.txt
 
-# Buscar sin distinguir mayúsculas/minúsculas
-grep -i error archivo.txt
-    </pre>
+# Ignorar mayúsculas/minúsculas
+grep -i "texto" archivo.txt
 
-    <h2>Aportaciones de compañeros</h2>
+# Mostrar número de línea
+grep -n "texto" archivo.txt
+            </pre>
+        </div>
 
+    <!-- ERRORES -->
+    <h2>Errores comunes</h2>
+        <div class="flex">
+            <pre>
+# Error: no usar comillas
+grep texto largo archivo.txt
+
+# Correcto
+grep "texto largo" archivo.txt
+
+# Error: olvidar -i
+grep "hola" archivo.txt
+
+# Correcto
+grep -i "hola" archivo.txt
+            </pre>
+        </div>
+
+    <h2>Aportaciones</h2>
     <h3>Aron Estalayo</h3>
 
 </body>

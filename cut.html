@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina Cut</title>
+     <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
 
@@ -10,32 +37,37 @@
 
     <!-- DESCRIPCIÓN -->
     <h2>Descripción</h2>
-    <p>
-        El comando <code>cut</code> se utiliza para cortar secciones específicas de cada línea 
-        de un archivo de texto o de la entrada estándar. Este comando permite seleccionar columnas 
-        delimitadas por caracteres o posiciones, extrayendo únicamente la parte que interese al 
-        usuario. Es útil cuando se necesita procesar grandes volúmenes de datos en formato tabular.
-    </p>
+    <div class="flex">
+        <p>
+            El comando <code>cut</code> se utiliza para cortar secciones específicas de cada línea 
+            de un archivo de texto o de la entrada estándar. Este comando permite seleccionar columnas 
+            delimitadas por caracteres o posiciones, extrayendo únicamente la parte que interese al 
+            usuario. Es útil cuando se necesita procesar grandes volúmenes de datos en formato tabular.
+        </p>
+    </div>
 
     <!-- OPCIONES -->
     <h2>Opciones</h2>
-    <ul>
-        <li>
-            <strong>-d delimitador</strong> → Especifica el delimitador que se utiliza para separar 
-            las columnas en cada línea. Por defecto, es un tabulador.
-        </li>
-        <li>
-            <strong>-f campos</strong> → Selecciona los campos (columnas) que se desean mostrar, 
-            donde los campos se numeran a partir de 1.
-        </li>
-        <li>
-            <strong>-c rangos</strong> → Selecciona caracteres en posiciones específicas de cada línea.
-        </li>
-    </ul>
+   <div class="flex">
+        <ul>
+            <li>
+                <strong>-d delimitador</strong> → Especifica el delimitador que se utiliza para separar 
+                las columnas en cada línea. Por defecto, es un tabulador.
+            </li>
+            <li>
+                <strong>-f campos</strong> → Selecciona los campos (columnas) que se desean mostrar, 
+                donde los campos se numeran a partir de 1.
+            </li>
+            <li>
+                <strong>-c rangos</strong> → Selecciona caracteres en posiciones específicas de cada línea.
+            </li>
+        </ul>
+   </div>
 
     <!-- EJEMPLOS -->
     <h2>Ejemplos</h2>
-    <pre>
+    <div class="flex">
+         <pre>
 # Ejemplo 1: Mostrar la primera columna de un archivo separado por comas
 cut -d "," -f 1 archivo.csv
 
@@ -52,6 +84,7 @@ cut -c 1-5 archivo.txt
 cut -c 3- archivo.txt
     </pre>
 
+    </div>
 	<h3>Hecho por Hugo Gaona Weber</3>
 
 </body>
