@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo comando find</title>
+</head>
+<body>
+    <h1>Ejemplo de uso del comando find</h1>
+
+    <p>Buscar archivos .txt modificados en el último día:</p>
+    <pre>find /ruta -name "*.txt" -mtime -1</pre>
+
+    <p>Buscar archivos con permisos 644:</p>
+    <pre>find /ruta -perm 644</pre>
+
+    <p>Buscar archivos mayores a 10MB:</p>
+    <pre>find /ruta -size +10M</pre>
+
+    <p>Ejecutar un comando (borrar archivos .log):</p>
+    <pre>find /ruta -name "*.log" -exec rm {} \;</pre>
+
+</body>
+</html>
