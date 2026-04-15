@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina Sort</title>
+    <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
 
@@ -10,33 +37,41 @@
 
     <!-- DESCRIPCIÓN -->
     <h2>Descripción</h2>
-    <p>
-        El comando <code>sort</code> ordena las líneas de un archivo o de la entrada estándar 
-        en orden ascendente o descendente. Este comando es útil para organizar información y 
-        buscar patrones o datos ordenados de forma alfabética o numérica. El orden por defecto 
-        es ascendente, pero se pueden especificar otras opciones como el orden descendente o 
-        personalizar la forma en que se realiza la ordenación.
-    </p>
-
+    <div class="flex">
+        <p>
+            El comando <code>sort</code> ordena las líneas de un archivo o de la entrada estándar 
+            en orden ascendente o descendente. Este comando es útil para organizar información y 
+            buscar patrones o datos ordenados de forma alfabética o numérica. El orden por defecto 
+            es ascendente, pero se pueden especificar otras opciones como el orden descendente o 
+            personalizar la forma en que se realiza la ordenación.
+        </p>
+        </div>
     <!-- OPCIONES -->
     <h2>Opciones</h2>
-    <ul>
-        <li>
-            <strong>-r</strong> → Ordena las líneas en orden descendente 
-            (de Z a A, en lugar de A a Z).
-        </li>
-        <li>
-            <strong>-n</strong> → Realiza una ordenación numérica, 
-            en lugar de alfabética.
-        </li>
-        <li>
-            <strong>-k clave</strong> → Especifica la columna (o clave) por la cual 
-            se va a ordenar el texto, útil cuando se trabaja con datos tabulares.
-        </li>
-    </ul>
+    <div class="flex">
+        <ul>
+            <li><p>
+                <strong>-r</strong> → Ordena las líneas en orden descendente 
+                (de Z a A, en lugar de A a Z).
+                </p>
+            </li>
+            <li>
+                <p>
+                <strong>-n</strong> → Realiza una ordenación numérica, 
+                en lugar de alfabética.
+            </p>
+            </li>
+            <li><p>
+                <strong>-k clave</strong> → Especifica la columna (o clave) por la cual 
+                se va a ordenar el texto, útil cuando se trabaja con datos tabulares.
+            </p>
+            </li>
+        </ul>
+    </div>
 
     <!-- EJEMPLOS -->
     <h2>Ejemplos</h2>
+    <div class="flex">
     <pre>
 # Ejemplo 1: Ordenar un archivo alfabéticamente
 sort archivo.txt
@@ -53,6 +88,7 @@ sort -k 2 archivo.txt
 # Ejemplo 5: Ordenar por columna con delimitador específico (por ejemplo, coma)
 sort -t "," -k 2 archivo.csv
     </pre>
+    </div>
 
 	<h3>Hecho por Hugo Gaona Weber</3>
 

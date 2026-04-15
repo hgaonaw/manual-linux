@@ -1,23 +1,103 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Ejemplo comando find</title>
+    <title>Pagina FIND</title>
+    <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
-    <h1>Ejemplo de uso del comando find</h1>
 
-    <p>Buscar archivos .txt modificados en el último día:</p>
-    <pre>find /ruta -name "*.txt" -mtime -1</pre>
+    <h1>FIND</h1>
 
-    <p>Buscar archivos con permisos 644:</p>
-    <pre>find /ruta -perm 644</pre>
+    <!-- DESCRIPCIÓN -->
+    <h2>Descripción</h2>
+    <div class="flex">
+        <p>
+            El comando <strong>find</strong> se utiliza para buscar archivos y directorios dentro del sistema. 
+            Permite filtrar por nombre, tamaño, fecha de modificación, permisos y ejecutar acciones sobre los resultados.
+        </p>
+    </div>
 
-    <p>Buscar archivos mayores a 10MB:</p>
-    <pre>find /ruta -size +10M</pre>
+    <!-- OPCIONES -->
+    <h2>Opciones</h2>
+    <div class="flex">
+         <ul>
+            <li><strong>-name</strong> → Busca por nombre de archivo.</li>
+            <li><strong>-size</strong> → Filtra por tamaño del archivo.</li>
+            <li><strong>-mtime</strong> → Filtra por fecha de modificación.</li>
+            <li><strong>-exec</strong> → Ejecuta un comando sobre los resultados.</li>
+        </ul>
+    </div>
 
-    <p>Ejecutar un comando (borrar archivos .log):</p>
-    <pre>find /ruta -name "*.log" -exec rm {} \;</pre>
+    <!-- EJEMPLOS -->
+    <h2>Ejemplos</h2>
+        <div class="flex">
+            <pre>
+# Buscar archivos .txt modificados en el último día
+find /ruta -name "*.txt" -mtime -1
+
+# Buscar archivos con permisos 644
+find /ruta -perm 644
+
+# Buscar archivos mayores a 10MB
+find /ruta -size +10M
+
+# Borrar archivos .log
+find /ruta -name "*.log" -exec rm {} \;
+            </pre>
+        </div>
+
+    <!-- ERRORES -->
+    <h2>Errores comunes</h2>
+        <div class="flex">
+            <pre>
+# Error: olvidar comillas
+find /ruta -name *.txt
+
+# Correcto
+find /ruta -name "*.txt"
+
+# Error: usar mal el tamaño
+find /ruta -size 10M
+
+# Correcto
+find /ruta -size +10M
+
+# Error: olvidar escapar ;
+find /ruta -name "*.log" -exec rm {} ;
+
+# Correcto
+find /ruta -name "*.log" -exec rm {} \;
+            </pre>
+        </div>
+
+    <h2>Aportaciones</h2>
+    <h3>Aron Estalayo</h3>
 
 </body>
 </html>
