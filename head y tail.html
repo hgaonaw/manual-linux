@@ -3,6 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Pagina Head y Tail</title>
+      <style>
+        body{
+            background-color:rgb(240, 196, 103);
+            text-align: center;
+        }
+        h1{
+            color:white;
+
+        }
+        h2{
+            color: rgb(60, 90, 145);
+        }
+        p,li,pre{
+            color:white;
+            font-size:20px;
+        }
+        
+        .flex{
+            display:flex;
+            text-align: center;
+            width:75%;
+            background-color: rgb(48, 66, 100);
+            padding:15px;
+            margin: 0 auto;
+            justify-content: center; 
+        }
+    </style>
 </head>
 <body>
 
@@ -10,29 +37,35 @@
 
     <!-- DESCRIPCIÓN -->
     <h2>Descripción</h2>
-    <p>
-        Los comandos <code>head</code> y <code>tail</code> se utilizan para mostrar 
-        las primeras o últimas líneas de un archivo, respectivamente. Son herramientas 
-        muy útiles para examinar grandes archivos de texto, permitiendo inspeccionar 
-        rápidamente sus primeras o últimas entradas sin tener que abrir el archivo completo.
-    </p>
+    <div class="flex">
+        <p>
+            Los comandos <code>head</code> y <code>tail</code> se utilizan para mostrar 
+            las primeras o últimas líneas de un archivo, respectivamente. Son herramientas 
+            muy útiles para examinar grandes archivos de texto, permitiendo inspeccionar 
+            rápidamente sus primeras o últimas entradas sin tener que abrir el archivo completo.
+        </p>
+    </div>
+    
 
     <!-- OPCIONES -->
     <h2>Opciones</h2>
-    <ul>
-        <li>
-            <strong>-n número</strong> → Especifica el número de líneas que se mostrarán, 
-            ya sea al principio con <code>head</code> o al final con <code>tail</code>.
-        </li>
-        <li>
-            <strong>-f</strong> → En <code>tail</code>, permite seguir mostrando las nuevas 
-            líneas que se van agregando a un archivo en tiempo real (útil para logs).
-        </li>
-    </ul>
+   <div class="flex">
+         <ul>
+            <li>
+                <strong>-n número</strong> → Especifica el número de líneas que se mostrarán, 
+                ya sea al principio con <code>head</code> o al final con <code>tail</code>.
+            </li>
+            <li>
+                <strong>-f</strong> → En <code>tail</code>, permite seguir mostrando las nuevas 
+                líneas que se van agregando a un archivo en tiempo real (útil para logs).
+            </li>
+        </ul>
+   </div>
 
     <!-- EJEMPLOS -->
     <h2>Ejemplos</h2>
-    <pre>
+    <div class="flex">
+         <pre>
 # Ejemplo 1: Mostrar las primeras 10 líneas de un archivo
 head archivo.txt
 
@@ -47,7 +80,8 @@ tail -n 3 archivo.txt
 
 # Ejemplo 5: Seguir un archivo en tiempo real (logs)
 tail -f archivo.log
-    </pre>
+        </pre>
+    </div>
 
 	<h3>Hecho por Hugo Gaona Weber</h3>
 
